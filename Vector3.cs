@@ -66,17 +66,14 @@ public class Vector3
     {
         File.WriteAllText(filePath,ToJson());
     }
-
     public static Vector3? FromFile(string filePath)
     {
         return JsonConvert.DeserializeObject<Vector3>(File.ReadAllText(filePath));
     }
-
     public static Vector3? FromJson(string json)
     {
         return JsonConvert.DeserializeObject<Vector3>(json);
     }
-
     public override string ToString()
     {
         return $"{X},{Y},{Z}";
